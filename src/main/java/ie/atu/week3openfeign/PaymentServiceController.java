@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentServiceController {
     @PostMapping("/confirmMessage")
     public String paymentConfirm(@RequestBody Product product) {
-        String confirmMessage = String.format("Recieved payment for %i, Product %s at Price %f",
+        String confirmMessage = String.format("Recieved payment for ID: %d, Product: %s at Price: %.2f",
                 product.getId(), product.getName(), product.getPrice());
         return confirmMessage;
     }
